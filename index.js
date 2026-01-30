@@ -34,12 +34,12 @@ app.get('/saturno', (req, res) => {
     res.render('pages/saturno');
     console.log('pagina planeta cargada');
 });
-app.get('/Urano', (req, res) => {
-    res.render('pages/Urano');
+app.get('/urano', (req, res) => {
+    res.render('pages/urano');
     console.log('pagina planeta cargada');
 });
-app.get('/Neptuno', (req, res) => {
-    res.render('pages/Neptuno');
+app.get('/neptuno', (req, res) => {
+    res.render('pages/neptuno');
     console.log('pagina planeta cargada');
 });
 app.get('/', (req, res) => {
@@ -47,7 +47,8 @@ app.get('/', (req, res) => {
     console.log('pagina planeta cargada');
 });
 
-const server = app.listen(4000, () => {
-    console.log('listen to port 4000');
-    console.log('Hola mundo');
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log('Servidor corriendo en puerto', PORT);
 });
