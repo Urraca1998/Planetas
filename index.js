@@ -3,11 +3,11 @@ const path = require('path');
 
 const app = express();
 
-// EJS
+// motor de vistas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// estáticos
+// archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 // rutas
